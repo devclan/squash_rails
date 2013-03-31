@@ -97,7 +97,7 @@ module Squash::Ruby::ControllerMethods
         :environment    => Rails.env.to_s,
         :root           => Rails.root.to_s,
 
-        :headers        => filter_for_squash(_filter_for_squash(request.headers.to_hash, :headers), :headers),
+        :headers        => filter_for_squash(_filter_for_squash(request.headers, :headers), :headers),
         :request_method => request.request_method.to_s.upcase,
         :schema         => request.protocol.sub('://', ''),
         :host           => request.host,
